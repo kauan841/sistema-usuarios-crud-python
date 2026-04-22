@@ -24,13 +24,6 @@ Este projeto implementa um CRUD completo (Create, Read, Update, Delete) no termi
 
 ---
 
-## 📂 Estrutura do Projeto
-
-```
-usuarios-dict-sistema/
-│
-└── sistema_usuarios.py
-```
 
 ---
 
