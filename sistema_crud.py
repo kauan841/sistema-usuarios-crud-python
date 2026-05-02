@@ -1,15 +1,17 @@
-usuarios = {}
+usuarios = []
 
 
 def adicionar_usuario(nome, idade):
-    if nome in usuarios:
-        print(f"Usuário '{nome}' já existe.")
+    for usuario in usuarios:
+        if usuario['nome'] == nome:
+            print(f"Usuário '{nome}' já existe.")
+            return
         return
 
-    usuarios[nome] = {
+    usuarios.append({
         'nome': nome,
         'idade': idade
-    }
+    })
 
     print(f"Usuário '{nome}' adicionado com sucesso!")
 
@@ -19,26 +21,25 @@ def listar_usuarios():
         print("Nenhum usuário cadastrado.")
     else:
         print("\nLista de usuários:")
-        for i, usuario in enumerate(usuarios.values(), start=1):
+        for i, usuario in enumerate(usuarios, start=1):
             print(f"{i}. Nome: {usuario['nome']}, Idade: {usuario['idade']}")
 
 
 def buscar_usuario(nome):
-    if nome in usuarios:
-        usuario = usuarios[nome]
-        print(f"Usuário encontrado: Nome: {usuario['nome']}, Idade: {usuario['idade']}")
-    else:
-        print(f"Usuário '{nome}' não encontrado.")
+    for usuario in usuarios:
+        if usuario['nome'] == nome:
+            print(f"Usuário encontrado: Nome: {usuario['nome']}, Idade: {usuario['idade']}")
+            return
+    print(f"Usuário '{nome}' não encontrado.")
 
 
 def atualizar_usuario(nome):
-    if nome in usuarios:
-        usuario = usuarios[nome]
-
-        try:
-            nova_idade = int(input(f"Digite a nova idade para '{nome}': "))
-        except ValueError:
-            print("Digite um número válido.")
+    for usuario in usuarios:
+        if usuario['nome'] == nome:
+            try:
+                nova_idade = int(input(f"Digite a nova idade para '{nome}': "))
+            except ValueError:
+                print("Digite um número válido.")
             return
 
         usuario['idade'] = nova_idade
@@ -48,11 +49,12 @@ def atualizar_usuario(nome):
 
 
 def remover_usuario(nome):
-    if nome in usuarios:
-        del usuarios[nome]
-        print(f"Usuário '{nome}' removido com sucesso!")
-    else:
-        print(f"Usuário '{nome}' não encontrado.")
+    for i, usuario in enumerate(usuarios):
+        if usuario['nome'] == nome:
+            del usuarios[i]
+            print(f"Usuário '{nome}' removido com sucesso!")
+            return
+    print(f"Usuário '{nome}' não encontrado.")
 
 
 # MENU PRINCIPAL
