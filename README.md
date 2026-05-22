@@ -24,36 +24,6 @@ Este projeto implementa um CRUD completo (Create, Read, Update, Delete) no termi
 
 ---
 
-## 📂 Estrutura do Projeto
-
-```
-usuarios-dict-sistema/
-│
-└── sistema_usuarios.py
-```
-
----
-
-## ▶️ Como executar
-
-1. Clone o repositório:
-
-```bash
-git clone https://github.com/seu-usuario/usuarios-dict-sistema.git
-```
-
-2. Acesse a pasta:
-
-```bash
-cd usuarios-dict-sistema
-```
-
-3. Execute o arquivo:
-
-```bash
-python sistema_usuarios.py
-```
-
 ---
 
 ## 💻 Exemplo de uso
