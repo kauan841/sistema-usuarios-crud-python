@@ -1,40 +1,78 @@
-# 👥 Sistema de Usuários com Python (CRUD)
+# CRUDCore 👥
 
-Um sistema simples de gerenciamento de usuários desenvolvido em Python, utilizando dicionários (`dict`).
-Este projeto implementa um CRUD completo (Create, Read, Update, Delete) no terminal.
+Sistema CRUD de usuários desenvolvido em Python com autenticação, gerenciamento de usuários e organização modular de arquivos.
 
 ---
 
-## 🚀 Funcionalidades
+## 🚀 Sobre o projeto
 
-* ➕ Adicionar usuário
-* 📋 Listar usuários
-* 🔍 Buscar usuário
-* ✏️ Atualizar usuário
-* ❌ Remover usuário
+O CRUDCore é um sistema desenvolvido em Python com foco em prática de lógica de programação, organização de código e simulação de sistemas reais.
+
+O projeto permite cadastrar, listar, buscar, atualizar e remover usuários diretamente pelo terminal, além de possuir sistema de login e validações de entrada.
+
+---
+
+## ⚙️ Funcionalidades
+
+- ➕ Adicionar usuários
+- 📋 Listar usuários
+- 🔍 Buscar usuários
+- ✏️ Atualizar usuários
+- ❌ Remover usuários
+- 🔐 Sistema de login
+- 🧠 Validação de entradas
+- 📂 Organização modular em múltiplos arquivos
+- ⚠️ Tratamento de erros
 
 ---
 
 ## 🧠 Tecnologias utilizadas
 
-* Python 3
-* Estrutura de dados: `dict`
-* Estruturas de controle (`if`, `while`, `for`)
-* Tratamento de erros (`try/except`)
+- Python 3
+- Dicionários (`dict`)
+- Estruturas de repetição (`while`, `for`)
+- Estruturas condicionais (`if`, `elif`, `else`)
+- Tratamento de exceções (`try/except`)
+- Modularização de código
+- Git e GitHub
 
 ---
 
----# CRUDCore
+## 📂 Estrutura do projeto
 
-Sistema CRUD de usuários desenvolvido em Python com autenticação e gerenciamento de usuários.
-
+```bash
+CRUDCore/
+│
+├── funcoes_do_crud/
+│   ├── adicionar.py
+│   ├── atualizar.py
+│   ├── buscar.py
+│   ├── cadastro.py
+│   ├── listar.py
+│   ├── login.py
+│   └── remover.py
+│
+├── main.py
+└── README.md
+```
 
 ---
 
 ## 💻 Exemplo de uso
 
-```
+```text
+
+Você deseja entrar no sistema? (s/n)
+
+Bem-vindo ao sistema CRUD de usuários!
+"Faça cadastro para acessar o sistema.
+1. Fazer cadastro
+2. Fazer login"
+
+
+
 Menu de opções:
+
 1. Adicionar usuário
 2. Listar usuários
 3. Buscar usuário
@@ -45,23 +83,29 @@ Menu de opções:
 
 ---
 
-## 🎯 Objetivo do projeto
+## 🎯 Objetivos do projeto
 
-Este projeto foi desenvolvido com o objetivo de praticar:
+Este projeto foi criado para praticar:
 
-* Manipulação de dicionários
-* Organização de código em funções
-* Lógica de programação
-* Simulação de sistemas reais (CRUD)
+- Lógica de programação
+- Estruturas de dados
+- Organização de sistemas
+- Modularização de arquivos
+- Validação de entradas
+- Fluxo de menus
+- Tratamento de erros
+- Versionamento com Git/GitHub
 
 ---
 
-## 📈 Possíveis melhorias
+## 📈 Melhorias futuras
 
-* 💾 Salvar dados em arquivo (JSON ou TXT)
-* 🔐 Adicionar sistema de login
-* 🌐 Transformar em API com Flask
-* 🗂️ Separar código em múltiplos arquivos
+- 💾 Salvar usuários em JSON
+- 🗄️ Integração com banco de dados SQLite
+- 🌐 Transformar em API com Flask
+- 🖥️ Criar interface gráfica
+- 🔑 Sistema de autenticação mais avançado
+- 📱 Versão web do sistema
 
 ---
 
