@@ -24,8 +24,15 @@ Este projeto implementa um CRUD completo (Create, Read, Update, Delete) no termi
 
 ---
 
+---# CRUDCore
+
+Sistema CRUD de usuários desenvolvido em Python com autenticação e gerenciamento de usuários.
+
+
 ---
 
+
+>>>>>>> 628efdd5a00b72f77ca6e7a1c1c64d4a435de87b
 ## 💻 Exemplo de uso
 
 ```
