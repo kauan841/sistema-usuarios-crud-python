@@ -31,8 +31,6 @@ Sistema CRUD de usuários desenvolvido em Python com autenticação e gerenciame
 
 ---
 
-
->>>>>>> 628efdd5a00b72f77ca6e7a1c1c64d4a435de87b
 ## 💻 Exemplo de uso
 
 ```
