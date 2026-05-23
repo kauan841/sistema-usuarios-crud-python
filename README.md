@@ -52,7 +52,10 @@ CRUDCore/
 │   ├── login.py
 │   └── remover.py
 │
-├── main.py
+├── sistema_CRUD
+│   ├── sistema_crud.py
+│
+│
 └── README.md
 ```
 
