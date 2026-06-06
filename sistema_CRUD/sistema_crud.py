@@ -1,14 +1,36 @@
 import sys
 import os
+import json
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from funcoes_do_crud.adicionar import adicionar_usuario_no_sistema
+
+from funcoes_do_crud.arquivo import ler_arquivo_json
+from funcoes_do_crud.adicionar import adicionar_usuario_no_sistema, usuarios
 from funcoes_do_crud.listar import listar_usuarios
 from funcoes_do_crud.buscar import buscar_usuario
 from funcoes_do_crud.atualizar import atualizar_usuario
 from funcoes_do_crud.remover import remover_usuario
 from funcoes_do_crud.login import login
+
+
+caminho = r"C:\\Users\\kaike\Desktop\\CRUD\\dados\\login.json"
+
+try:
+    with open(caminho, "r", encoding="utf-8") as arquivo:
+        usuarios.update(json.load(arquivo))
+except (FileNotFoundError, json.JSONDecodeError):
+    pass
+
+caminho = r"C:\\Users\\kaike\Desktop\\CRUD\\dados\\adicionar.json"
+
+try:
+    with open(caminho, "r", encoding="utf-8") as arquivo:
+        usuarios.update(json.load(arquivo))
+except (FileNotFoundError, json.JSONDecodeError):
+    pass
+
+
 
 
 while True:
@@ -24,6 +46,7 @@ while True:
 
     else:
         print("Opção inválida. Digite 's' para sim ou 'n' para não.")
+
 
 
 # LOGIN / CADASTRO
@@ -67,8 +90,14 @@ while True:
 
         print("Cadastro realizado com sucesso!")
 
-        if login():
-            break
+     
+        caminho = r"C:\\Users\\kaike\\Desktop\\CRUD\\dados\\login.json"
+        with open(caminho, 'w', encoding='utf-8') as arquivo:
+            json.dump(usuarios, arquivo, indent=4)
+
+
+
+
 
     elif escolha == '2':
 
@@ -120,6 +149,9 @@ while True:
             continue
 
         adicionar_usuario_no_sistema(nome, idade)
+        caminho = r"C:\\Users\\kaike\\Desktop\\CRUD\\dados\\adicionar.json"
+        with open(caminho, 'w', encoding='utf-8') as arquivo:
+            json.dump(usuarios, arquivo, indent=4)
 
     elif escolha == '2':
         listar_usuarios()
@@ -143,6 +175,9 @@ while True:
             continue
 
         atualizar_usuario(nome)
+        caminho = r"C:\\Users\\kaike\\Desktop\\CRUD\\dados\\adicionar.json"
+        with open(caminho, 'w', encoding='utf-8') as arquivo:
+            json.dump(usuarios, arquivo, indent=4)
 
     elif escolha == '5':
 
@@ -153,6 +188,9 @@ while True:
             continue
 
         remover_usuario(nome)
+        caminho = r"C:\\Users\\kaike\\Desktop\\CRUD\\dados\\adicionar.json"
+        with open(caminho, 'w', encoding='utf-8') as arquivo:
+            json.dump(usuarios, arquivo, indent=4)
 
     elif escolha == '6':
 

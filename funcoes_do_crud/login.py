@@ -1,4 +1,5 @@
 from .adicionar import usuarios
+from .arquivo import ler_arquivo_json
 
 def login():
     print("Bem-vindo ao sistema de login!")
@@ -13,7 +14,8 @@ def login():
         print("Nome ou idade inválidos. Tente novamente.")
         return False
 
-    for usuario in usuarios.values():
+    usuarios_cadastrados = ler_arquivo_json()
+    for usuario in usuarios_cadastrados.values():
         if usuario['nome'] == nome and usuario['idade'] == idade:
             print(f"Login bem-sucedido! Bem-vindo, {nome}!")
             return True
